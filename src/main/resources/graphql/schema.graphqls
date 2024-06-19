@@ -1,0 +1,22 @@
+scalar Date @specifiedBy(url: "http://tools.ietf.org/html/rfc3339")
+type Query{
+    findAllPosts: [Post]
+    findPostBySlug(slug: String!): Post
+    findPostById(id: Int): Post
+}
+
+type Post{
+    id: ID!
+    title: String!
+    summary: String,
+    url: String
+    datePublished: String,
+    comments: [Comment]
+}
+type Comment{
+    id: ID!
+    postId: ID!
+    name: String!
+    email: String
+    body: Int
+}

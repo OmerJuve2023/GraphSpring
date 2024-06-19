@@ -1,0 +1,8 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: graphql
+  sql:
+    init:
+      mode: always

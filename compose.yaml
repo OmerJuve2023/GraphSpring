@@ -1,0 +1,10 @@
+services:
+  db-graphql:
+    container_name: postgres-graphql
+    image: 'postgres:latest'
+    ports:
+      - '5432:5432'
+    environment:
+      - 'POSTGRES_DB=db_graphql'
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=password'
