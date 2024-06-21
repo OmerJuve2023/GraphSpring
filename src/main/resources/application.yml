@@ -6,3 +6,8 @@ spring:
   sql:
     init:
       mode: always
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_graphql
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver

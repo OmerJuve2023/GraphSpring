@@ -1,20 +1,14 @@
 package com.omersolutions.graphspring.controller;
 
-import com.omersolutions.graphspring.entities.Comment;
 import com.omersolutions.graphspring.entities.Post;
 import com.omersolutions.graphspring.repository.PostRepository;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.web.client.RestClient;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
