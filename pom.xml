@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.omerSolutions</groupId>
-    <artifactId>graphSpring</artifactId>
+    <artifactId>graphspring</artifactId>
     <version>1.0.0</version>
-    <name>graphSpring</name>
-    <description>graphSpring</description>
+    <name>graphspring</name>
+    <description>graphspring</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -84,6 +84,10 @@
                 <configuration>
                     <argLine>-Xshare:off</argLine>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.graalvm.buildtools</groupId>
+                <artifactId>native-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

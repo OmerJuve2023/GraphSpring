@@ -33,8 +33,4 @@ public class PostController {
     Optional<Post> findBySlug(@PathVariable String slug) {
         return postRepository.findPostByUrlContainsIgnoreCase(slug);
     }
-
-    List<Post> findAllPostWithCommentsAndRelatedPosts() {
-        return null;
-    }
 }

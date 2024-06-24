@@ -1,4 +1,5 @@
 services:
+  # Postgres Database
   db-graphql:
     container_name: postgres-graphql
     image: 'postgres:latest'
@@ -8,3 +9,19 @@ services:
       - 'POSTGRES_DB=db_graphql'
       - 'POSTGRES_USER=postgres'
       - 'POSTGRES_PASSWORD=password'
+
+  graphql-spring:
+    container_name: graph-web
+    depends_on:
+      - db-graphql
+    build:
+        context: .
+        dockerfile: 'Dockerfile'
+    ports:
+      - "8081:8081"
+    environment:
+        - 'SPRING_DATASOURCE_URL=jdbc:postgresql://db-graphql:5432/db_graphql'
+        - 'SPRING_DATASOURCE_USERNAME=postgres'
+        - 'SPRING_DATASOURCE_PASSWORD=password'
+        - 'SPRING_JPA_HIBERNATE_DDL_AUTO=create'
+        - 'SPRING_JPA_SHOW_SQL=true'
